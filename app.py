@@ -29,6 +29,9 @@ def legacy_transfer():
         # If the header is missing or incorrect, deny access with a helpful message
         return "Access Denied: Invalid or missing digital signature for legacy transfer. This endpoint requires specific 'non-standard means' of access.", 403 # 403 Forbidden status
 
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=True)
 # --- For Local Testing ---
 # If you want to run this application directly using Python, uncomment the lines below.
 # When deploying to platforms like Render, Gunicorn typically handles this.
