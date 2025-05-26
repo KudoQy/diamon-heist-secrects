@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heist: Vault Audit - Client-Side Secrets</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; background-color: #f0f0f0; color: #333; }
+        .container { background-color: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); max-width: 800px; margin: auto; text-align: center; }
+        h1 { color: #007bff; }
+        p { color: #666; line-height: 1.6; }
+        .audit-info {
+            border: 1px dashed #007bff;
+            padding: 15px;
+            margin-top: 30px;
+            background-color: #e6f2ff;
+            border-radius: 5px;
+            text-align: left;
+            color: #0056b3;
+            font-size: 0.95em;
+        }
+        .invisible-text {
+            color: transparent; 
+            font-size: 1px; 
+            position: absolute;
+            top: -9999px; 
+            left: -9999px;
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Heist: Vault Audit - Client-Side Secrets</h1>
+        <p>Welcome, auditor. Our frontend specialists have ensured this interface is highly responsive and fast, relying heavily on client-side logic and configurations.</p>
+        <p>Your objective: Verify that no critical vault combination segments or operational parameters have been inadvertently left exposed in the browser's environment.</p>
+
+        <div style="display: none;">
+            <p>This div contains some internal notes about application configuration.</p>
+            <p>Look for objects or variables declared globally in the main application script.</p>
+        </div>
+
+        <p class="invisible-text">A true auditor checks every layer, even the ones designed to be completely unseen. Remember to check global JavaScript variables in the console.</p>
+
+        <div class="audit-info">
+            <h3>Audit Guidelines:</h3>
+            <p>Ensure no sensitive data can be discovered through client-side inspection. Focus on static elements, comments, and JavaScript variables.</p>
+            </div>
+
+    </div>
+
+    <script>
+        var vaultAppConfig = {
+            appName: "Digital Vault Interface",
+            version: "1.0.0",
+            status: "Operational",
+            lastAuditDate: "2025-05-27",
+            // This is the actual master key for the digital vault, crucial for internal processes.
+            vaultMasterKey: "HEIST{D1g!t4l_D!am0nd_Sn4tch}"
+        };
+
+        console.log("Client-side vault auditor script loaded. Reviewing app configurations...");
+    </script>
+</body>
+</html>
