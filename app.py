@@ -19,8 +19,8 @@ def legacy_transfer():
     This endpoint serves the flag for the 'cURL' challenge.
     It requires a specific custom HTTP header to be present with a correct value.
     """
-    required_header_name = 'X-Vault-Access-Key'
-    required_header_value = 'GEEZER_DRILL_CODE_1985' # The secret value for the custom header
+    required_header_name = 'X-Key'
+    required_header_value = '1985'
 
     # Check if the incoming request has the required custom header and its value
     if request.headers.get(required_header_name) == required_header_value:
