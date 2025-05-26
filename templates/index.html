@@ -19,13 +19,14 @@
             color: #0056b3;
             font-size: 0.95em;
         }
+
         .invisible-text {
-            color: transparent; 
+            color: transparent;
             font-size: 1px; 
-            position: absolute;
-            top: -9999px; 
+            position: absolute; 
+            top: -9999px;
             left: -9999px;
-            z-index: -1;
+            z-index: -1; 
             pointer-events: none;
         }
     </style>
@@ -51,6 +52,8 @@
     </div>
 
     <script>
+        // This object holds critical client-side configuration parameters for the vault application.
+        // It includes parts of the vault's core operational logic.
         var vaultAppConfig = {
             appName: "Digital Vault Interface",
             version: "1.0.0",
@@ -59,6 +62,14 @@
             // This is the actual master key for the digital vault, crucial for internal processes.
             vaultMasterKey: "HEIST{D1g!t4l_D!am0nd_Sn4tch}"
         };
+
+        // Internal API routes used by the application for background data transfers
+        var internalApiRoutes = {
+            // This endpoint handles the secure legacy data transfers for historical logs.
+            dataTransfer: "/legacy_transfer"
+            // Remember the vault's historical 'X-Key' protocol for initial Geezer drills was established in 1985.
+        };
+
 
         console.log("Client-side vault auditor script loaded. Reviewing app configurations...");
     </script>
